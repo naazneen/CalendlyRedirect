@@ -1,0 +1,10 @@
+<p>delete page</p>
+{% if student.manager == request.user %}
+<form action = "" method = "POST" enctype= "multipart/form_data">
+{% csrf_token %}
+{{form}}
+<input type = "Submit" value = "DELETE">
+</form>
+{% else %}
+<p>You can not access</p>
+{% endif %}

@@ -1,0 +1,7 @@
+<p>login page</p>
+
+<form action = "" method = "POST" enctype= "multipart/form_data">
+{% csrf_token %}
+{{form}}
+<input type = "Submit" value = "Login">
+</form>

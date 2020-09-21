@@ -1,0 +1,14 @@
+
+Search result for {{search_term}}
+
+{% if students%}
+{% for student in students %}
+
+<p>{{student.firstname}} 
+{{student.lastname}}
+{{student.email}}</p>
+
+{% endfor %}
+{%else%}
+<p>Nothing to show</p>
+{%endif%}

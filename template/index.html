@@ -1,0 +1,26 @@
+<html>
+<h1>Calendly - Redirect</h1>
+
+{%if request.user.is_authenticated%}
+
+<a href = "{%url 'logout'%}">logout</a>
+{%else%}
+<p><a href = "{% url 'login'%}">Login</a></p>
+{%endif%}
+
+{% for student in students %}
+<p>{{student.id}}</p>
+<p>{{student.event_type_name}}</p>
+
+<a href = "{% url 'update' student.id %}"> Click to update </a>
+<a href = "{% url 'delete' student.id %}"> Click to delete </a>
+
+
+{% endfor %}
+
+<form action = "{% url 'home' %}" method = "GET">
+<input id="id" type ="text" name="search_term" value=" " placeholder="eventid"/>
+<button type = "submit"> GO </button>
+</form>
+
+</html>

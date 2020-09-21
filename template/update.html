@@ -1,0 +1,9 @@
+{% load crispy_forms_tags%}
+<p>update page</p>
+
+<form action = "" method = "POST" enctype= "multipart/form_data">
+{% csrf_token %}
+
+{{form|crispy}}
+<input type = "Submit" value = "UPDATE">
+</form>
