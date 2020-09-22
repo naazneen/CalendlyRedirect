@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 from django.utils.timezone import datetime
 from django.contrib.auth.models import User
+from utils import create_new_ref_number
 
 
 # Create your models here.
